@@ -1,0 +1,195 @@
+@keyframes slideInNavbar {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Section Animation */
+@keyframes slideInHeroText {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInHeroImage {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Navbar styles */
+.navbar {
+  animation: slideInNavbar 1s ease-out forwards;
+}
+
+/* Hero Text Animation */
+.hero-text {
+  animation: slideInHeroText 1s ease-out forwards;
+}
+
+/* Hero Image Animation */
+.hero-image {
+  animation: slideInHeroImage 1s ease-out forwards;
+}
+
+.header {
+  background: linear-gradient(to right, #a565c9, #432ead);
+}
+
+.project:hover .overlay {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.project:hover .btn {
+  display: block;
+}
+
+@keyframes fillBar {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: var(--target-width);
+  }
+}
+
+.bar-animate {
+  animation: fillBar 3s ease-out forwards;
+}
+
+.bar-reset {
+  width: 0%;
+}
+
+/* Bar loading: 5 buletan */
+.dot-loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.dot-loader div {
+  width: 12px;
+  height: 12px;
+  background-color: #5d2e7f;
+  border-radius: 50%;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.dot-loader div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot-loader div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.dot-loader div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.dot-loader div:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.navbar {
+  background: linear-gradient(to right, #a565c9, #432ead);
+}
+
+@keyframes bounce {
+
+  0%,
+  80%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  40% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.float-anim {
+  animation: float 3s ease-in-out infinite;
+}
+
+.rotate-slow {
+  animation: rotate-slow 10s linear infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking {
+  animation: blink 1s step-end infinite;
+}
